@@ -26,3 +26,4 @@ dist-ssr
 #identifiants et mots de passe
 .env
 .DS_Store
+*.pages
