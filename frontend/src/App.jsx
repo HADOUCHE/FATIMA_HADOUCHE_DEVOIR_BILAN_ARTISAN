@@ -1,22 +1,22 @@
-import Header from './components/Header.jsx'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Accueil from './pages/Accueil.jsx'
+import ListeArtisans from './pages/ListeArtisans.jsx'
+import ProfilArtisan from './pages/ProfilArtisan.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
   return (
-    <>
-      <Header/>
-      <main className="container mt-5">
-          <h1 className="text-primary">
-            Trouve ton artisan
-          </h1>
-          <p className="lead">
-            Trouvez facilement un artisan près de chez vous.
-          </p>
-          <button className="btn btn-primary">
-            Découvrir les artisans
-          </button>
-      </main>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/artisans" element={<ListeArtisans />} />
+        <Route path="/artisans/:id" element={<ProfilArtisan />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
+
 export default App

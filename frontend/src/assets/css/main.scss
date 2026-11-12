@@ -1,15 +1,232 @@
-// Couleurs principales du site
-// Variable SASS qui stocke une couleur
-$primary-color: #2c5f4a;
-// Variable SASS qui stocke une deuxieme couleur
-$secondary-color: #f5f1e8;
+//
+// FONTS gras, moyen, normal
+//
+@font-face {
+  font-family: 'Graphik';
+  src: url('../fonts/Graphik-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-// Styles généraux
-// Selecteur CSS qui cible toute la page
+@font-face {
+  font-family: 'Graphik';
+  src: url('../fonts/Graphik-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('../fonts/Graphik-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+//
+// CHARTE GRAPHIQUE
+//
+
+$primary-color: #0074c7;
+$secondary-color: #00497c;
+$light-color: #f1f8fc;
+$dark-color: #384050;
+$red-color: #cd2c2e;
+$green-color: #82b864;
+
+// 
+// STYLES GENERAUX
+// 
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Graphik', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  color: $dark-color;
+}
 
+h1, h2, h3 {
+  color: $secondary-color;
+}
+
+//
+// NAVIGATION
+// 
+
+.navbar {
+  background-color: $light-color !important;
+  padding: 15px 0;
+}
+
+.nav-link {
+  color: $dark-color;
+  font-weight: 600;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+//
+// BOUTONS
+// 
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: #ffffff;
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+// 
+// PAGE D'ACCUEIL
+// 
+
+.accueil-section {
+  background-color: $light-color;
+  padding: 80px 0 !important;
+
+  h1 {
+    color: $secondary-color;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+// 
+// LES 4 ETAPES
+// 
+
+.etapes-section {
+  h2 {
+    color: $secondary-color;
+  }
+}
+
+.etape-card {
+  background-color: $light-color;
+  padding: 25px;
+  border-radius: 10px;
+
+  h3 {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    margin: 15px 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.etape-numero {
+  color: $primary-color;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+// 
+// ARTISANS MIS EN AVANT
+// 
+
+.artisans-section {
+  background-color: $light-color;
+
+  h2 {
+    color: $secondary-color;
+  }
+}
+
+.artisan-card {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+  .card-title {
+    color: $secondary-color;
+    font-size: 1.3rem;
+  }
+
+  .artisan-note {
+    color: $green-color;
+    font-weight: bold;
+  }
+}
+// 
+// FOOTER
+// 
+.footer {
+  background-color: #0074c7;
+  color: #ffffff;
+  margin-top: auto;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      opacity: 0.85;
+    }
+  }
+
+  address {
+    font-style: normal;
+    line-height: 1.8;
+  }
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.7);
+  margin: 2rem 0 1.5rem;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  display: inline-block;
+  max-width: 320px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
